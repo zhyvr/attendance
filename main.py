@@ -69,7 +69,7 @@ class Register(tkinter.Toplevel):
                     # SPACE pressed
                     img_name = name + "_" + dept + "_" + id + ".jpg"
 
-                    path = os.getcwd() + "/attendanceImages"
+                    path = os.getcwd() + "/data"
                     cv2.imwrite(os.path.join(path, img_name), frame)
                     print("captured")
                     break
@@ -90,7 +90,7 @@ class Markattendance:
             f.write("Name, Department, ID, Date, Time \n")
             f.close()
 
-        path = 'attendanceImages'
+        path = 'data'
         images = []
         classNames = []
         myList = os.listdir(path)
