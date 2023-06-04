@@ -7,7 +7,8 @@ import numpy as np
 import face_recognition
 import csv
 
-d = datetime.now().strftime("%d%m%Y")
+# This line of code retrieves the current date and time and stores it as a string in the format "DDMMYYYY" in the variable cd.
+cd = datetime.now().strftime("%d%m%Y")
 
 class Register(tkinter.Toplevel):
     def __init__(self, parent):
@@ -80,7 +81,7 @@ class Register(tkinter.Toplevel):
 class Markattendance:
     def __init__(self):
 
-        attendancefile = "attendance"+"_"+d+ ".csv"
+        attendancefile = "attendance"+"_"+cd+ ".csv"
         fileexist = os.path.exists(attendancefile)
 
         if fileexist == True:
@@ -186,7 +187,7 @@ class Display(tkinter.Toplevel):
         my_canvas.create_window((0, 0), window=second_frame, anchor="nw")
 
         # open file
-        with open("attendance"+"_"+d+ ".csv", newline="") as file:
+        with open("attendance"+"_"+cd+ ".csv", newline="") as file:
             reader = csv.reader(file)
 
             r = 0
