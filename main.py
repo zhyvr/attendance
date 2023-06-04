@@ -1,11 +1,11 @@
-from tkinter import *
+from tkinter import *          # Providing access to its GUI toolkit.
 import tkinter
-import cv2
-import os
-from datetime import datetime
-import numpy as np
-import face_recognition
-import csv
+import cv2                     # Imports the OpenCV module, which is used for computer vision tasks.
+import os                      # Provides a way to interact with the operating system.
+from datetime import datetime  # Used for working with dates and times.
+import numpy as np             # a library for numerical computations, and aliases it as np for shorter references.
+import face_recognition        # a popular library for face recognition tasks.
+import csv                     # provides functionality for working with CSV files.
 
 # This line of code retrieves the current date and time and stores it as a string in the format "DDMMYYYY" in the variable cd.
 cd = datetime.now().strftime("%d%m%Y")
