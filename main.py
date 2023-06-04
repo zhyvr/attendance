@@ -10,6 +10,7 @@ import csv                     # provides functionality for working with CSV fil
 # This line of code retrieves the current date and time and stores it as a string in the format "DDMMYYYY" in the variable cd.
 cd = datetime.now().strftime("%d%m%Y")
 
+# This class is a GUI window for registering information and capturing images using a webcam.
 class Register(tkinter.Toplevel):
     def __init__(self, parent):
         super().__init__(parent)
@@ -17,6 +18,7 @@ class Register(tkinter.Toplevel):
         self.geometry('700x400')
         self.title('AViaFace - Register')
 
+        # This function is called when the "Capture and Register" button is clicked, and the fff() function captures an image from a webcam and saves it to a file.
         def clicked():
             fff(namefill.get(),idfill.get(),deptfill.get())
 
