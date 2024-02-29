@@ -16,7 +16,7 @@ class Register(tkinter.Toplevel):
         super().__init__(parent)
 
         self.geometry('700x400')
-        self.title('AViaFace - Register')
+        self.title('Attendance - Register')
 
         # This function is called when the "Capture and Register" button is clicked, and the fff() function captures an image from a webcam and saves it to a file.
         def clicked():
@@ -175,7 +175,7 @@ class Display(tkinter.Toplevel):
         super().__init__(parent)
 
         self.geometry('800x400')
-        self.title('AViaFace - View')
+        self.title('Attendance - View')
 
         main_frame = Frame(self)
         main_frame.pack(fill=BOTH, expand=1)
@@ -206,7 +206,7 @@ class App(tkinter.Tk):
         super().__init__()
 
         self.geometry('800x600')
-        self.title('AViaFace')
+        self.title('Attendance')
         ######################################################################### Buttons
         b1 = Button(self, text = 'MARK ATTENDANCE', command = self.MARK_ATTENDANCE,width=17, height=3)
         b1.place(x=333, y=110)
